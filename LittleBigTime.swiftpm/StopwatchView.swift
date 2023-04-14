@@ -101,8 +101,9 @@ struct StopwatchView: View {
                 timer?.invalidate()
                 isRunning = false
                 // 유저의 할일과 시간 저장??
-                todolist.append(todo)
-                timelist.append(time)
+//                todolist.append(todo)
+                todolist.addItem(TodoData(todo: todo, time: time))
+//                timelist.append(time)
 //                tododata.append(ListItem(todo: todo, time: time))
             }) {
                 Text("Finish")
@@ -118,10 +119,10 @@ struct StopwatchView: View {
     }
 }
 
-class TodoList: ObservableObject, Identifiable {
-    @Published var todolist: [String] = []
-    var id: UUID = UUID()
-}
+//class TodoList: ObservableObject, Identifiable {
+//    @Published var todolist: [String] = []
+//    var id: UUID = UUID()
+//}
 
 class TimeList: ObservableObject, Identifiable {
     @Published var timelist: [Int] = []

@@ -30,6 +30,7 @@ struct CreateView: View {
             //                    .overlay( RoundedRectangle(cornerRadius: 50) .stroke(Color.blue) )
                 .background(RoundedRectangle(cornerRadius: 50).fill(Color(uiColor: .secondarySystemBackground)))
             nextBtn
+//                .border(.black, width: 2)
         }
     }
     // 타이머까지 다 돌아간 후에 todo를 TodoData.todo에 append

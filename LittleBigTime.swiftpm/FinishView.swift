@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FinishView: View {
 //    @Binding var time: Int
+    @EnvironmentObject var todolist: TodoList
     @Binding var rootIsActive: Bool
 //    @Binding var todolist: TodoList
 //    @Binding var timelist: TimeList
@@ -20,9 +21,9 @@ struct FinishView: View {
     
     var body: some View {
         VStack {
-            ForEach(todolist, id: \.self) {
+            ForEach(todolist.todoItems, id: \.self) {
                 todoitem in
-                Text(todoitem)
+                Text(todoitem.todo)
                     .font(.custom("HelveticaNeue", size: 100))
                     .fontWeight(.ultraLight)
             }
